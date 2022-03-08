@@ -15,14 +15,8 @@ describe('Delivery', () => {
 
       cy.get('.swal2-container .swal2-icon-success')
         .should('include.text', 'Recebemos os seus dados.')
+        .and('be.visible')
     })
-  })
-
-  it('goes back to the home page', () => {
-    cy.contains('a', 'Voltar para home').click()
-    cy.get('#page-home main h1')
-      .should('have.text', 'Seja um parceiro entregador pela Buger Eats')
-      .and('be.visible')
   })
 
   context('Errors', () => {
@@ -63,7 +57,7 @@ describe('Delivery', () => {
         'Adicione uma foto da sua CNH'
       ]
 
-      cy.get('form button[type="submit"]').click()
+      cy.get('@submitButton').click()
 
       errorMessages.forEach(message => {
         cy.contains(alertErrorSelector, message).should('be.visible')

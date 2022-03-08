@@ -7,8 +7,8 @@ const { generate } = require('gerador-validador-cpf')
 module.exports = (on, config) => {
   on('task', {
     consumerFactory() {
-      let firstName = 'Walmyr'
-      let lastName = 'Filho'
+      const firstName = 'Walmyr'
+      const lastName = 'Filho'
 
       return {
         name: `${firstName} ${lastName}`,
