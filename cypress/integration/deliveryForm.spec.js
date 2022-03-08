@@ -18,6 +18,13 @@ describe('Delivery', () => {
     })
   })
 
+  it('goes back to the home page', () => {
+    cy.contains('a', 'Voltar para home').click()
+    cy.get('#page-home main h1')
+      .should('have.text', 'Seja um parceiro entregador pela Buger Eats')
+      .and('be.visible')
+  })
+
   context('Errors', () => {
     const alertErrorSelector = '.alert-error'
 
