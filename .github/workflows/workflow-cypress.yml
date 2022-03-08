@@ -1,4 +1,4 @@
-name: Cypress Regression Tests
+name: Cypress tests
 
 on: [push]
 
@@ -16,13 +16,8 @@ jobs:
       - name: 'UI Tests - Chrome'
         uses: cypress-io/github-action@v2
         with:
-          install-command: yarn install
+          install-command: npm install
           wait-on: ${{ secrets.BASE_URL }}
           wait-on-timeout: 120
           browser: chrome
-          record: true
-          group: 'UI - Chrome'
           spec: cypress/integration/*
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
