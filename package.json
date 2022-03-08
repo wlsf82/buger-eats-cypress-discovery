@@ -2,17 +2,15 @@
   "name": "buger-eats",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "cy:open": "cypress open",
+    "test": "cypress run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "9.0.0",
-    "cypress-file-upload": "5.0.8",
-    "faker": "5.5.3",
+    "cypress": "9.5.1",
     "gerador-validador-cpf": "5.0.2"
   }
 }
