@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "9.5.1",
+    "cypress": "^9.5.2",
     "gerador-validador-cpf": "5.0.2"
   }
 }
