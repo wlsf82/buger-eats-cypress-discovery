@@ -14,7 +14,7 @@ Cypress.Commands.add('fillForm', deliveryman => {
 
   cy.contains('.delivery-method li', 'Moto').click()
   cy.get('input[type="file"]')
-    .selectFile('cypress/fixtures/cnh.png', { force: true })
+    .selectFile('cypress/fixtures/driver-license.png', { force: true })
 })
 
 Cypress.Commands.add('assertModalHasTextAndIsVisible', text => {
